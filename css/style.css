@@ -1,0 +1,211 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+/*猫背景*/
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(159, 163, 157, 0.7), rgba(159, 163, 157, 0.7)), url(../img/log2.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 6%;
+  box-sizing: border-box;
+}
+/*将目录icon平行置于页面顶部*/
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+.menu-icon {
+    width: 60px;
+    cursor: pointer;
+    margin-left: 60px;
+}
+nav {
+    flex: 1;
+    text-align: right;
+}
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left:80px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.row{
+    display: flex;
+    height: 78%;
+    align-items: center;
+}
+.col {
+    flex-basis: 50%;
+  }
+  h1 {
+    color: #000000;
+    font-size: 50px;
+  }
+  p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+}
+/* mainbox盒子的样式 */
+.mainbox {
+    position: absolute;
+    left: 13%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+}
+/* label文字框的样式书写 */
+label{
+    position: relative;
+    background: #fff;
+    width: 150px;
+    height: 50px;
+    border-radius: 35px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    display: block;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+/* 给文字加点hover效果 */
+label:hover{
+    letter-spacing: 2px;
+}
+/* 用before伪元素制作取消文字框， */
+label::before{
+    content: "cancel";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    border-radius: 35px;
+    opacity: 0;
+}
+/* 处理input选框 */
+#check{
+    display: none;
+}
+
+/* 通过input选框状态，切换取消文字的透明度为1 */
+#check:checked ~ label::before{
+    opacity: 1;
+}
+/* 修改图标样式 */
+.media-icons{
+    position: absolute;
+    left: 50%;
+    top: -120px;
+    transform: translateX(-50%);
+    background: #ffffff;
+    width: 140%;
+    height: 110%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 35px;
+    padding: 4px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    }
+    
+    /* 通过input选框状态，切换图标框 */
+    #check:checked~.media-icons{
+        opacity: 1;
+        pointer-events: auto;
+        top: -84px;
+    }
+    
+    /* 制作小三角 */
+    .media-icons::before{
+        content: "";
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        left: 50%;
+        background-color: #fff;
+        bottom: -9px;
+        transform: translateX(-50%) rotate(45deg);
+        z-index: -1;
+    }
+    
+    /* 修改a链接样式 */
+    .media-icons a{
+        font-size: 22px;
+        color: #333;
+        transition: all 0.3s ease;
+    }
+    
+    .media-icons a:hover{
+        transform: translateY(-2px);
+    }
+    
+    /* 为每一个icon修改颜色 */
+    .media-icons a:nth-child(1):hover{
+        color: #1871d7;
+    }
+    .media-icons a:nth-child(2):hover{
+        color: #b3632e;
+    }
+    .media-icons a:nth-child(3):hover{
+        color: #0e38bf;
+    }
+    .media-icons a:nth-child(4):hover{
+        color: #000000;
+    }
+
+.card{
+    width: 240px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 30px 80px;
+    box-sizing: border-box;
+    cursor:pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+.card1{
+    background-image: url(../img/toushika_kabunushi_happy.png);
+    background-color: #fff;
+}
+.card2{
+    background-image: url(../img/card2.png);
+}
+.card:hover{
+    transform: translateY(-10px);
+  }
+ .card1 h5{
+    color: #000000;
+    text-shadow: 0 0 5px #999;
+    font-size: 16px;
+  }
+  .card2 h5{
+    color: #000000;
+    text-shadow: 0 0 5px #999;
+    font-size: 16px;
+  }

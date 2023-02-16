@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可視化アプリケーション</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 关联css样式和图标库 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+            </nav>
+            <img src="./img/menu.png" class="menu-icon" />
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>便利なアプリケーション</h1>
+                <p>
+                    　右のアイコンをワンクリックだけでウェブアプリケーションをご利用<br>
+                    　ご利用可能なアプリケーション：株価可視化アプリ、物体検出アプリ<br>
+                </p>
+            </div>
+            <body>
+                <!-- sharebox的页面编写-->
+                <div class="mainbox">
+                    <input type="checkbox" id="check">
+                    <label for="check">share</label>
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+            
+                </div>
+            </body>
+            <div class="col">
+                <div class="card1 card" onclick="window.open('https://koyuki518-mysite-app-cg19l6.streamlit.app/')" target='_blank'>
+                    <h5>株価可視化</h5>
+                </div>
+                <div class="card2 card" onclick="window.open('https://koyuki518-mysite2-app2-hz5b7c.streamlit.app/')" target='_blank'>
+                    <h5>　物体検出</h5>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
